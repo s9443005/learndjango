@@ -12,4 +12,8 @@
 * Template -- HTML，在HTML裡嵌入「變數」
 * URLs -- urls.py
 #### Django啟動
-* 查看版本 ```python --version```
+* 查看版本 ```python --version```，例如```python 3.6.12```
+* 查看版本 ```pip --version```，例如```pip 21.2.4 from c:\python39\lib\site-packages\pip (python 3.9)```
+* 為每個 Django 專案建立各自的 Virtual Environment 虛擬環境
+* 建立專案 ```py -m venv myworld```，然後```dir/s myworld```一下。```?```己經建立了咋辦
+* 啟用環境 ```myword\Scripts\activate.bat```
