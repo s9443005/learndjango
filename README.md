@@ -125,3 +125,7 @@ class Member(models.Model):
   firstname = models.CharField(max_length=255)
   lastname = models.CharField(max_length=255)
 ```
+* 以上內容屬於資料庫管理系統的內容，同學被假定己有一定基礎
+* 當我們建立了Django project時，就產生了一個空的 SQLite 資料庫，它位於my_tennis_club根資料夾，其檔名為db.sqlite3，表格會存在裡面
+* 以指令```py manage.py makemigrations members```執行後，真正去產生表格。讀一下回饋報表。
+* W3School接著去研究了```my_tennis_club/members/migrations/0001_initial.py```，內容也不錯，這裡先跳過。
