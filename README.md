@@ -95,7 +95,7 @@ def members(request):
   template = loader.get_template('myfirst.html')
   return HttpResponse(template.render())
 ```
-* 修改```settings.py```內容成為：
+* 修改```settings.py```內容成為：(我的python版本是使用雙引號，W3School範例是單引號，應該沒差；實作時我還單雙混用咧。)
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -107,4 +107,12 @@ INSTALLED_APPS = [
     'members'
 ]
 ```
+* 叫網頁也和前面有一點不同哦
+
+```py manage.py migrate``` 
+
+```py manage.py runserver``` 
+
+* 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_template_myfirst.png)
+* 回顧比較一下，我們到這裡有2次從瀏覽器```http://127.0.0.1:8000/members/```去連伺服器，1次是純python程式，1次是使用Template（就myfirst.html檔）。這意味著你可以使用另外的HTML+CSS+JavaScript，運用你原本熟悉的能力。
 #### 建立 Django Models
