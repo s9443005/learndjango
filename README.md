@@ -23,4 +23,4 @@
 * 回到```myworld```目錄，建立一個新專案```my_tennis_club```，這樣下指令```django-admin startproject my_tennis_club```
 * 會自動建立一個目錄系統，用```dir/s```去看看目錄結構
 * 厲害了，在```/my_tennis_club目錄```，啟動WEB Server，會看到一些說明...
-* 打開瀏覽器，```http://127.0.0.1:8000```
+* 打開瀏覽器，```http://127.0.0.1:8000```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django1.png)
