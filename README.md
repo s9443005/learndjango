@@ -41,6 +41,7 @@ def members(request):
     return HttpResponse("Hello world!")
 ```
 以上的例子是伺服器送出回應給瀏覽器，想要執行view的話，還得透過呼叫call a URL。
+
 * 和views.py同一個目錄```my_tennis_club/members/urls.py```，建立urls.py，指定給members（看內容的指定方式），內容如下：
 ```
 from django.urls import path
@@ -63,3 +64,7 @@ urlpatterns = [
 ```
 * 然後到```/my_tennis_club```，執行```py manage.py runserver```啟動WEB Server
 * 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_hello_world.png)
+* 我們到這裡有2次從瀏覽器去連伺服器，分別是
++```http://127.0.0.1:8000/```
++```http://127.0.0.1:8000/members/```
+一個是直接連根目錄，另一個連接叫另外的目錄，這個叫做render，翻譯有很多種，其中以翻成```渲染```我覺得最有趣。
