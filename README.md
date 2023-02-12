@@ -52,9 +52,9 @@ urlpatterns = [
 ]
 ```
 
-＊ 令人混淆的是（至少旺旺這麼覺得），我們還必須在my_tennis_club（根目錄所在），也建立一個urls.py，先照做。
+* 令人混淆的是（至少旺旺這麼覺得），我們還必須在my_tennis_club（根目錄所在），也建立一個urls.py，先照做。
 
-```my_tennis_club/my_tennis_club/urls.py```
+```my_tennis_club/my_tennis_club/urls.py```，不要懷疑，在這個目錄底下
 ```
 from django.contrib import admin
 from django.urls import include, path
