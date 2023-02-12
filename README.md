@@ -24,7 +24,7 @@
 * 會自動建立一個目錄系統，用```dir/s```去看看目錄結構
 * 厲害了，在```/my_tennis_club目錄```，啟動WEB Server，會看到一些說明...
 * 打開瀏覽器，```http://127.0.0.1:8000```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django1.png)
-#### 建立 APP(Application)、View，URLs，Template，和Models
+#### 建立 Django APP(Application)、Django View
 * App的意義 -- 在專案裡，APP例如是一個 home page、一個conact form、或是一個member database
 * 停止伺服器```用Ctrl-Break```，建立一個APP，指令像這樣```py manage.py startapp members```，注意：要在正確的目錄底下。
 * 看看產生的目錄系統。
@@ -72,3 +72,6 @@ urlpatterns = [
     + ```http://127.0.0.1:8000/members/```
 
 一個是直接連根目錄，另一個連接叫另外的目錄，這個叫做render，翻譯有很多種，其中以翻成```渲染```我覺得最有趣。
+#### 建立 Django Template
+
+#### 建立 Django Models
