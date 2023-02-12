@@ -71,7 +71,40 @@ urlpatterns = [
     + ```http://127.0.0.1:8000/```
     + ```http://127.0.0.1:8000/members/```
 
-一個是直接連根目錄，另一個連接叫另外的目錄，這個叫做render，翻譯有很多種，其中以翻成```渲染```我覺得最有趣。
-#### 建立 Django Template
+一個是直接連根目錄，另一個連接叫另外的目錄執行特定的功能，這個叫做render，翻譯有很多種，其中以翻成```渲染```我覺得最有趣。
+#### 建立 Django Template，
+* 用```dir/s```查看目錄系統，在```my_tennis_club/my_tennis_club/members/template目錄```下建立```myfirst.html```，內容如下
+```
+<!DOCTYPE html>
+<html>
+<body>
 
+<h1>Hello World!</h1>
+<p>Welcome to my first Django project!</p>
+
+</body>
+</html>
+```
+* 接著要做2個檔案的修改，分別是```my_tennis_club/members/views.py```和```my_tennis_club/my_tennis_club/settings.py```
+* 修改```views.py```內容成為：
+```
+from django.http import HttpResponse
+from django.template import loader
+
+def members(request):
+  template = loader.get_template('myfirst.html')
+  return HttpResponse(template.render())
+```
+* 修改```settings.py```內容成為：
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'members'
+]
+```
 #### 建立 Django Models
