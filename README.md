@@ -51,7 +51,9 @@ urlpatterns = [
     path('members/', views.members, name='members'),
 ]
 ```
+
 ＊ 令人混淆的是（至少旺旺這麼覺得），我們還必須在my_tennis_club（根目錄所在），也建立一個urls.py，先照做。
+
 ```my_tennis_club/my_tennis_club/urls.py```
 ```
 from django.contrib import admin
@@ -65,6 +67,7 @@ urlpatterns = [
 * 然後到```/my_tennis_club```，執行```py manage.py runserver```啟動WEB Server
 * 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_hello_world.png)
 * 我們到這裡有2次從瀏覽器去連伺服器，分別是
+
     + ```http://127.0.0.1:8000/```
     + ```http://127.0.0.1:8000/members/```
 
