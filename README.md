@@ -1,17 +1,17 @@
 # learndjango
-## W3School學習筆記 D
+## W3School學習筆記
 ### Django Tutorial漿果教學
-#### Django家
+#### Django漿果家
 * 漿果是 a back-end server side web framework
 * 漿果是 free, open source and written in Python
 * 漿果是 makes it easier to build web pages using Python
 * 漿果強調 DRY, Don't Repeat Yourself、資料庫為 CRUD 操作 Create Read Update Delete
-#### Djang運作 -- MVT架構(pattern)漿果
+#### Djang漿果運作 -- MVT架構(原文為pattern)
 * Model -- Database，models.py
 * View -- 來自 user 的 request，views.py
 * Template -- HTML，在HTML裡嵌入「變數」
 * URLs -- urls.py
-#### Django啟動--虛擬環境、安裝Django、建立專案、啟用網站
+#### Django漿果啟動--虛擬環境、安裝Django、建立專案、啟用網站
 * 以下文字陳述並不完美，步驟或指令或提示，必須要有點想像力...
 * 查看版本 ```python --version```，例如```python 3.6.12```
 * 查看版本 ```pip --version```，例如```pip 21.2.4 from c:\python39\lib\site-packages\pip (python 3.9)```
@@ -28,9 +28,17 @@
 * App的意義 -- 在專案裡，APP例如是一個 home page、一個conact form、或是一個member database
 * 停止伺服器```用Ctrl-Break```，建立一個APP，指令像這樣```py manage.py startapp members```，注意：要在正確的目錄底下。
 * 看看產生的目錄系統。
-* 找到在my_tennis_club/members/views.py，用記事本或任何編輯器打開。修改成
-    from django.shortcuts import render
-    from django.http import HttpResponse
-    
-    def members(request):
+* 找到在my_tennis_club/members/views.py，用記事本或任何編輯器打開看到：
+```
+from django.shortcuts import render
+# Create your views here.
+```
+修改成
+```
+from django.shortcuts import render
+from django.http import HttpResponse
+def members(request):
     return HttpResponse("Hello world!")
+```
+以上的例子是伺服器送出回應給瀏覽器，想要執行view的話，還得透過呼叫call a URL。
+*
