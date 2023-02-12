@@ -1,4 +1,4 @@
-# learndjango
+# LEARNING Django漿果學習筆記
 ## W3School學習筆記
 ### Django Tutorial漿果教學
 #### Django漿果家
@@ -66,7 +66,7 @@ urlpatterns = [
 ```
 * 然後到```/my_tennis_club```，執行```py manage.py runserver```啟動WEB Server
 * 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_hello_world.png)
-* 我們到這裡有2次從瀏覽器去連伺服器，分別是
+* 回顧比較一下，我們到這裡有2次從瀏覽器去連伺服器，分別是
 
     + ```http://127.0.0.1:8000/```
     + ```http://127.0.0.1:8000/members/```
