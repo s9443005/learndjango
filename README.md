@@ -24,3 +24,13 @@
 * 會自動建立一個目錄系統，用```dir/s```去看看目錄結構
 * 厲害了，在```/my_tennis_club目錄```，啟動WEB Server，會看到一些說明...
 * 打開瀏覽器，```http://127.0.0.1:8000```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django1.png)
+#### 建立 APP(Application)、View，URLs，Template，和Models
+* App的意義 -- 在專案裡，APP例如是一個 home page、一個conact form、或是一個member database
+* 停止伺服器```用Ctrl-Break```，建立一個APP，指令像這樣```py manage.py startapp members```，注意：要在正確的目錄底下。
+* 看看產生的目錄系統。
+* 找到在my_tennis_club/members/views.py，用記事本或任何編輯器打開。修改成
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    
+    def members(request):
+    return HttpResponse("Hello world!")
