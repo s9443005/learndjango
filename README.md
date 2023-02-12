@@ -1,5 +1,5 @@
 # learndjango
-## W3School學習筆記
+## W3School學習筆記 D
 ### Django Tutorial漿果教學
 #### Django家
 * 漿果是 a back-end server side web framework
@@ -11,3 +11,5 @@
 * View -- 來自 user 的 request，views.py
 * Template -- HTML，在HTML裡嵌入「變數」
 * URLs -- urls.py
+#### Django啟動
+* 查看版本 ```python --version```
