@@ -41,4 +41,25 @@ def members(request):
     return HttpResponse("Hello world!")
 ```
 以上的例子是伺服器送出回應給瀏覽器，想要執行view的話，還得透過呼叫call a URL。
-*
+* 和views.py同一個目錄```my_tennis_club/members/urls.py```，建立urls.py，指定給members（看內容的指定方式），內容如下：
+```
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('members/', views.members, name='members'),
+]
+```
+＊令人混淆的是（至少旺旺這麼覺得），我們還必須在my_tennis_club（根目錄所在），也建立一個urls.py，先照做。
+```my_tennis_club/my_tennis_club/urls.py```
+```
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('', include('members.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+* 然後到```/my_tennis_club```，執行```py manage.py runserver```啟動WEB Server
+* 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_hello_world.png)
