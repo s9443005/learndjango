@@ -116,3 +116,12 @@ INSTALLED_APPS = [
 * 打開瀏覽器，```http://127.0.0.1:8000/members/```，畫面像這樣，[點我](https://www.w3schools.com/django/screenshot_django_template_myfirst.png)
 * 回顧比較一下，我們到這裡有2次從瀏覽器```http://127.0.0.1:8000/members/```去連伺服器，1次是純python程式，1次是使用Template（就myfirst.html檔）。這意味著你可以使用另外的HTML+CSS+JavaScript，運用你原本熟悉的能力。
 #### 建立 Django Models
+* Django Model是指資料庫database裡的1張表格table
+* 找到```my_tennis_club/members/models.py```，修改成：
+```
+from django.db import models
+
+class Member(models.Model):
+  firstname = models.CharField(max_length=255)
+  lastname = models.CharField(max_length=255)
+```
