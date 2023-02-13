@@ -150,6 +150,24 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> Member.objects.all().values()
 <QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'}]>
 ```
+* 新增多筆記錄如下，我發現跟傳統的DML還是有點不同的，而且實作畫面和W3School有些許不同
+```
+>>> member1 = Member(firstname='Tobias', lastname='Refsnes')
+>>> member2 = Member(firstname='Linus', lastname='Refsnes')
+>>> member3 = Member(firstname='Lene', lastname='Refsnes')
+>>> member4 = Member(firstname='Stale', lastname='Refsnes')
+>>> member5 = Member(firstname='Jane', lastname='Doe')
+>>> members_list = [member1, member2, member3, member4, member5]
+>>> for x in members_list:
+>>>   x.save()
+>>> Member.objects.all().values()
+<QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'},
+{'id': 2, 'firstname': 'Tobias', 'lastname': 'Refsnes'},
+{'id': 3, 'firstname': 'Linus', 'lastname': 'Refsnes'},
+{'id': 4, 'firstname': 'Lene', 'lastname': 'Refsnes'},
+{'id': 5, 'firstname': 'Stale', 'lastname': 'Refsnes'},
+{'id': 6, 'firstname': 'Jane', 'lastname': 'Doe'}]>
+```
 ##### 修改
 ##### 刪除
 #### 修改MODEL
