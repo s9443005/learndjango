@@ -134,3 +134,7 @@ class Member(models.Model):
 * 接下來 View SQL，我不太理解
 ```py manage.py sqlmigrate members 0001```，讀一下回饋報表，看起來是DML新增表格的指令。
 #### Django 新增、修改、刪除、查詢
+##### 新增
+##### 修改
+##### 刪除
+#### 修改MODEL
