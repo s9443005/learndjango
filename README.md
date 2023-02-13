@@ -135,6 +135,21 @@ class Member(models.Model):
 ```py manage.py sqlmigrate members 0001```，讀一下回饋報表，看起來是DML新增表格的指令。
 #### Django 新增、修改、刪除、查詢
 ##### 新增
+* 新增一筆記錄Record，這過程同學瞭解嗎？或者必須逐行解釋？
+```
+py manage.py shell
+Python 3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>
+>>> from members.models import Member
+>>> Member.objects.all()
+<QuerySet []>
+>>> member = Member(firstname='Emil', lastname='Refsnes')
+>>> member.save()
+>>> Member.objects.all().values()
+<QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'}]>
+```
 ##### 修改
 ##### 刪除
 #### 修改MODEL
