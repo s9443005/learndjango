@@ -6,11 +6,17 @@
 * 漿果是 free, open source and written in Python
 * 漿果是 makes it easier to build web pages using Python
 * 漿果強調 DRY, Don't Repeat Yourself、資料庫為 CRUD 操作 Create Read Update Delete
-#### Djang漿果運作 -- MVT架構(原文為pattern)
-* Model -- Database，models.py
-* View -- 來自 user 的 request，views.py
-* Template -- HTML，在HTML裡嵌入「變數」
+#### Djang漿果運作 -- MVT架構(原文為 MVT pattern)
+* Model -- Database以及Table，Model相當於DB裡的Table，在 models.py 裡設定
+* View -- 來自 user 的 request，在 views.py 裡設定
+* Template -- HTML，在HTML裡嵌入「Django變數」，經「Django解釋」後產生 HTML，由 HttpResponse 傳給瀏覽器。
 * URLs -- urls.py
+#### Django漿果 
+* 設定虛擬環境
+* 安裝Django
+* 新增專案 C:\...>django-admin startproject XXXproject
+* 啟動網站 C:\...>py manage.py runserver <----------------http://127.0.0.1:8000
+* 新增專案裡的應用系統 C":\...>py manage.py startapp XXXapp <------------檢視一下目錄結構
 #### Django漿果啟動--虛擬環境、安裝Django、建立專案、啟用網站
 * 以下文字陳述並不完美，步驟或指令或提示，必須要有點想像力...
 * 查看版本 ```python --version```，例如```python 3.6.12```
